@@ -1,0 +1,315 @@
+[data-mood="darkmood"]{
+    --main-color:#272b30;
+    --seconde-color: #2e343a;
+    --color-text: #fff;
+    --btn-main-color: #272729;
+    --third-color:rgb(58, 73, 123);
+    --para-color:rgb(149, 149, 149);
+    --hov-color:rgb(8, 136, 255);
+    
+}
+[data-mood="lightmood"]{
+    --main-color:rgb(58, 73, 123);
+    --seconde-color: #587ca0;
+    --color-text: #000000;
+    --btn-main-color: rgb(51, 93, 129);
+    --third-color:rgb(111, 123, 128);
+    --para-color:#0a0a0a;
+    --hov-color:rgb(181, 224, 253);
+
+}
+
+.setting{
+    top:20px;
+    left:90%;
+    
+    z-index: 2;
+    
+}
+
+.setlist{
+    background-color:var(--third-color);
+}
+
+
+button{
+    cursor: pointer !important;
+}
+
+body{
+    background-color: var(--main-color);
+    color: var(--color-text);
+    font-family: 'Shantell Sans', cursive;
+    
+    
+    
+}
+header img{
+    max-height: 30vh;
+}
+
+h5{
+    font-family: cursive;
+    text-transform: uppercase;
+    
+}
+.nav-logo{
+    width: 40px;
+    height: 40px;
+}
+#cust-nav{
+    background-color:var(--third-color) !important;
+    box-shadow:0 0 10px black !important;
+left: 50%;
+top: 25%;
+   
+}
+.cust{
+     position: sticky !important;
+    top: 40px;
+    background-color: var(--main-color)!important;
+    z-index: 1;
+    
+}
+.nav-ul{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    
+}
+ul a{
+    color:var(--color-text) !important;
+    font-family: cursive;
+    font-size: .75rem !important;
+    transition: all 0.3s !important;
+    text-transform: uppercase;
+}
+ul a:hover{
+    color:var(--hov-color) !important ;
+}
+
+.active{
+    
+    color: var(--hov-color) !important;
+}
+.cli{
+    text-decoration: none;
+    color: var(--hov-color) !important;
+}
+.cli:hover{
+    color: #000000 !important;
+}
+
+.sett{
+    background-color: var(--third-color);
+    color: #FFF;
+}
+.sett:hover{
+    background-color: var(--third-color);
+    color: #FFF;
+}
+
+
+.game-card{
+    border: 1px solid rgb(32, 32, 32);
+    background-color: var(--third-color);
+    transition: all .5s ;
+    cursor: pointer;
+    filter: grayscale(0.5);
+    
+}
+.card-body{
+    border-bottom: 1px solid rgb(32, 32, 32);
+}
+.card-body p{
+color: var(--para-color);
+}
+
+.game-card footer button{
+    color: var(--color-text);
+    background-color: var(--btn-main-color);
+    border: 0;
+    border-radius: 5px;
+    box-shadow:0 0 5px var(--seconde-color);
+    font-size: 12px;
+    
+
+}
+.game-card figcaption p{
+    font-size: .9rem;
+}
+
+.colmon{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.game-card:hover{
+    scale: 1.04;
+    filter: grayscale(0);
+}
+
+.game-det h6 span{
+    color: black;
+    padding: 1px 10px;
+    border-radius: 6px;
+    background-color: #09c;
+    font-size: 14px;
+    font-weight: bold;
+}
+.game-det2 span{
+    
+        color: black;
+        padding: 1px 10px;
+        border-radius: 6px;
+        background-color: rgb(2, 176, 60);
+        font-size: 12px;
+        font-weight: bold;
+    
+}
+.game-det2 h5{
+    margin-bottom: 0;
+}
+
+.game-det h5{
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+.cont-detals{
+    background-color: var(--main-color);
+
+    top:48px;
+    
+  
+  
+}
+
+.maindet{
+    
+    background-size:cover;
+    background-position: center;
+    
+}
+
+.detals{
+    background-color: rgba(128, 128, 128, 0.167);
+
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 3;
+    
+}
+.des-p{
+    font-size: .9rem;
+}
+
+
+form input,form button{
+    margin-top: 1.5rem;
+    height: 2.5rem;
+    border-radius: 10px;
+    outline: none;
+    color: var(--color-text);
+    background-color: var(--third-color);
+    border: none;
+    padding: 0 10px;
+}
+form input::placeholder{
+    color:var(--color-text)
+} 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+form span button{
+    transition: all .3s;
+    color: gray;
+}
+form span button:hover{
+    color: var(--third-color);
+}
+.reg{
+   
+}
+
+.invalid{
+    background-color:rgb(248, 158, 158) ;
+    color: red;
+    border-radius: 5px;
+    font-size: 14px;
+}
+.invalid p{
+    margin-bottom: 0;
+}
+
+.error{
+border: 1px solid red;
+}
+
+.corect{
+    border: 1px solid green;
+}
+.loader {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    border: 3px solid;
+    border-color: #FFF #FFF transparent transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+  .loader::after,
+  .loader::before {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: 3px solid;
+    border-color: transparent transparent #1d3366 #1d3366;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: rotationBack 0.5s linear infinite;
+    transform-origin: center center;
+  }
+  .loader::before {
+    width: 32px;
+    height: 32px;
+    border-color: #FFF #FFF transparent transparent;
+    animation: rotation 1.5s linear infinite;
+  }
+      
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+  @keyframes rotationBack {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+ 
+      
