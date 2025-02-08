@@ -43,29 +43,30 @@ export class Login{
     console.log(user);
   }
  async creatUser(x){
-    let api=await fetch('https://sticky-note-fe.vercel.app/signin',{
-      method:'post',
-      body:JSON.stringify(x),
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-    });
-    const respons=await api.json()
-    console.log(respons);
-    
-    
-
-    if(respons.message==='success'){
-      document.getElementById('login').classList.add('d-none')
-      localStorage.setItem('usertoken',respons.token)
+    // let api=await fetch('https://sticky-note-fe.vercel.app/signin',{
+    //   method:'post',
+    //   body:JSON.stringify(x),
+    //   headers: {
+    //     'Accept': 'application/json',
+    //     'Content-Type': 'application/json'
+    //   },
+    // });
+    // const respons=await api.json()
+     
+       document.getElementById('login').classList.add('d-none')
+       localStorage.setItem('usertoken',"user login true")
+       this.inputs[5].value=""
+       this.inputs[6].value=""
+    // if(respons){
+    //   document.getElementById('login').classList.add('d-none')
+    //   localStorage.setItem('usertoken',"user login true")
       
-    }else{
-      document.getElementById('message2').innerText=respons.message
-      document.getElementById('email2').classList.add('error')
-      document.getElementById('valemail2').classList.remove('d-none')
-      document.getElementById('valpass2').classList.remove('d-none')
-    }
+    // }else{
+    //   document.getElementById('message2').innerText=respons.message
+    //   document.getElementById('email2').classList.add('error')
+    //   document.getElementById('valemail2').classList.remove('d-none')
+    //   document.getElementById('valpass2').classList.remove('d-none')
+    // }
 
 
   }

@@ -46,12 +46,7 @@ export class Regester{
         this.inputs[4].addEventListener('input',()=>{
           this.validateage()
         })
-
-
-          
-          
-     
-        
+    
       
         }
     
@@ -68,25 +63,33 @@ export class Regester{
     console.log(user);
   }
  async creatUser(x){
-    let api=await fetch('https://sticky-note-fe.vercel.app/signup',{
-      method:'post',
-      body:JSON.stringify(x),
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-    });
-    const respons=await api.json()
-    console.log(respons);
+  // let api = await fetch('https://sticky-note-fe.vercel.app/signup', {
+  //   method: 'POST',
+  //   body: JSON.stringify(x),
+  //   headers: {
+  //     'Accept': 'application/json',
+  //     'Content-Type': 'application/json'
+  //   }
+  // });
 
-    if(respons.message==='success'){
+  //   const respons=await api.json()
+
       document.getElementById('register').classList.add('d-none')
       document.getElementById('login').classList.remove('d-none')
-    }else{
-      document.getElementById('message').innerText=respons.errors.email.message
-      document.getElementById('email').classList.add('error')
-      document.getElementById('valemail').classList.remove('d-none')
-    }
+      this.inputs[0].value=""
+      this.inputs[1].value=""
+      this.inputs[2].value=""
+      this.inputs[3].value=""
+      this.inputs[4].value=null
+
+    // if(respons){
+    //   document.getElementById('register').classList.add('d-none')
+    //   document.getElementById('login').classList.remove('d-none')
+    // }else{
+    //   document.getElementById('message').innerText=respons.errors.email.message
+    //   document.getElementById('email').classList.add('error')
+    //   document.getElementById('valemail').classList.remove('d-none')
+    // }
 
 
   }

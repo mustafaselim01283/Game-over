@@ -43,7 +43,6 @@ export class Category{
       let apiData=await fetch(`https://free-to-play-games-database.p.rapidapi.com/api/games?category=${cat}`, options)
       let apiResponse=await apiData.json()
       this.load.classList.add("d-none")
-            console.log(apiResponse);
             this.display(apiResponse)
             
             let details=new Details()
